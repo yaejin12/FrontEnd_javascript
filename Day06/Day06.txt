@@ -1,0 +1,48 @@
+  모듈
+    : 한가지 기능 이상을 하고 있는 코드 집단 (재사용성)
+    파일 단위로 기능을 분리하여 다른 파일에서 함수나 객체 등을 참조(가지고 오는)하는 것
+    (ex) react, vue, next, svelt, qivck, astro, remix 같은 현재 유행하고 있는 
+    프론트엔트 프레임워크가 존재할 수 있는 가장 근본적인 이유
+
+
+
+  for(forEach, for in, for of)
+
+    for문 
+    : 순회하지 않고 반복에 대한 조건을 내가 마음대로 변경할 수 있다.
+    //배열과 같이 이터러블한 객체가 아니더라도 사용이 가능하다.
+
+    for(초기식, 조건식, 증감식){
+      if()return; // 다음 반복문을 실행하지 않고 종료
+      if()continue; //다음 반복문으로 
+
+    }
+
+   
+    forEach
+      //index가 있기 때문에 순서를 보장
+      //모든 요소를 순회하는 반복문
+      => 모든 요소를 순회해서 반복해야하는데, 인덱스가 필요하다
+      
+        arr.forEach((el, index, origin)=>{ //origin은 잘 사용하지 않는다
+
+        })
+  
+     for in 
+      //객체의 키값을 반복문을 통해 사용가능
+      //순서가 보장되지 않습니다.
+      const yejin ={name: yejin, age: 20}
+
+      for(let key in yejin){
+        console.log (key) // 키 전부 보여줌
+        console.log(yejin[key]) // 키의 값을 전부 보여줌
+      }
+
+
+    for of
+    //=>모든 요소를 순회해서 반복해야하는데, 값만 필요하다.
+    const arr = [1,2,3,4,5]
+
+    for(let el of arr){
+      console.log(el)
+    }
