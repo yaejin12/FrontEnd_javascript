@@ -1,0 +1,47 @@
+Dom API
+  DOM(Document Object Model) - 문서 객체 모델
+  흔히 HTML 에서 사용하는 div, span과 요소들을 나타내는 말
+
+  AIP(Application Programming Interface)
+    응용프로그램 사이에서 통신에 사용되는 언어와 메세지 일체
+
+  DOM API 
+    -프론트엔드에서 DOM관련된 요소를 javascript로 언어와 메세지를 통해 데이터를 주고 받는 것
+
+    => HTML 요소를 자바스크립트를 활용하여 속성 값을 마음대로 변경
+
+  ------------------------------------------------------------------------------------------------
+
+  DOM Selector (DOM 선택자)
+    DOM API를 활용하기 위하여 HTML애 툭종헌 요소를 선택자
+
+    --HTMLCollection
+        -유사배열객체
+        -live(실시간으로 값이 수정될 수 있음)
+        1. document.getElementById("아이디 이름 적기")
+        2. document.getElementsByClassName("클래스이름 적기")
+
+  
+
+    --NodeList
+        -유사배열객체
+        -이터러블 forEach, 순회 가능
+        3. document.querySelector("css 선택자") // 1개
+        4. document.querySelectorAll (.menu-list") //모두 가지고 온다
+
+ 
+ =======================================================================================
+
+ (ex)
+
+ let $divs = document.querySelectorAll("div")
+
+ 해당 요소가 가지고 있는 속성의 값에 접근할 수 있으며
+ 해당 값을 수정하는 것도 가능하다.
+
+ 이를 넘어서 해당 요소를 복사하거나 요소를 생성하여 자식의 
+ 요소에 추가할 수도 있어요.
+
+ =======================================================================================
+
+    

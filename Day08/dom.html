@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="./js/script.js"></script>
+   
+    <script>
+      window.onload = () => {
+        //사용자에게 화면이 로드 되고나서 실행해야하는 함수
+        //window.onload는 밑에 있는 script를 상단으로 올리기 위해 x
+        //페이지가 로드 되었을 때 실행해야하는 함수 정의
+        alert("안녕하세요");
+      };
+    </script>
+  </head>
+  <body>
+    <div id="id"></div>
+    <script>
+      //내부 자바스크립트 작성시에는 요소 밑으로 입력
+      const $div = document.querySelector("#id");
+      const $div2 = document.getElementById("id");
+      console.log($div, $div2);
+    </script>
+  </body>
+</html>
