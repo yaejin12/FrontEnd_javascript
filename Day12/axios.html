@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      // axios = 라이브러리
+      // 라이브러리를 적용하려면 다른 사람이 작성한 코드를 다운로드
+      // https://axios-http.com/kr/docs/intro
+      const BACKEND_URL = "https://jsonplaceholder.typicode.com";
+      axios.get(BACKEND_URL + "/posts").then((res) => {
+        const posts = res.data;
+        const body = document.querySelector("body");
+        // for(const post of posts){
+        //     body.append()
+        // }
+        const postInner = posts
+          .map(
+            (post) => `
+                <div>${post.title}</div>
+            `
+          )
+          .join("");
+        body.innerHTML = postInner;
+      });
+      // axios.get(BACKEND_URL + "/comments")
+      async function fetchPosts() {
+        const posts = await axios.get(BACKEND_URL).then((res) => res.data);
+        console.log(posts);
+      }
+      fetchPosts();
+    </script>
+  </head>
+  <body></body>
+</html>

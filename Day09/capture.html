@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body * {
+            margin: 10px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        form
+        <div>
+            div
+            <p>
+                p
+            </p>
+        </div>
+    </form>
+    <script>
+        const els = document.querySelectorAll("*")
+
+        for(const el of els) {
+            el.addEventListener('click', (e) => {
+                // e.stopPropagation()
+                alert(el.tagName)
+            }, true)
+        }
+        // 버블링
+        // 부모자식관계 둘 다 이벤트를 줘야할 때
+        // 버블링 옵션이 중요 = 이벤트 전파 방지 해야한다
+
+    </script>
+</body>
+</html>

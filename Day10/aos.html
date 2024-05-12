@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--
+        라이브러리 (도서관), 다른 사람들이 만든 코드 중에서 내가 필요로 하는 것으 
+        선택하여 가지고와 사용 (원하는 코드를 선택), 오픈 소스
+
+        프레임워크 (완성된 도구), 정해진 사용법에 한하여 코드를 작성, A라는 기능을
+        만들기 위해 편의성이 필요합니다 -> 라이브러리, 프레임워크 // 라이브러리x
+        프레임워크가 이미 만들어놨음
+    -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .item {
+            margin: 20rem auto;
+
+            width: 30%;
+            height: 50vh;
+
+            background-color: aquamarine;
+
+            font-size: 3rem;
+            font-weight: bold;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- 
+        라이브러리를 사용하기 위한 가장 최적의 방법은 무엇일까요?
+
+        1. 공식 문서를 면밀히 살펴본다
+        2. 검색해서 다른 사람들은 어떻게 사용했는지 분석하고 터득한다 - 최신글(필터)
+    -->
+    <div class="item" data-aos="fade-up">fade-up</div>
+    <div class="item" data-aos="flip-left">flip-left</div>
+    <div class="item" data-aos="zoom-in" data-aos-offset="400" data-aos-once="false">zoom-in</div>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

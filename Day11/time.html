@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>0</div>
+    <script>
+      setTimeout(() => {
+        alert("5초가 지났습니다");
+        //location: 브라우저가 가지고있는 url을 제어하는 객체
+        //history: 브라우저가 가지고있는 url 기록
+        window.location.href = "/javascript/Day10/board.html";
+      }, 5000); //5초 후에
+
+      //history
+      //history.go(n) : 뒤로가기 앞으로 가기
+      //history.back(n) : 뒤로가기 뒤으로 가기
+      //history.forward(n)
+
+      /*
+      setInterval과 setTimeout이 반환하는 값은 해당 비동기 실행의 고유한 값이므로
+      초기화 할 때는 
+      */
+      const $div = document.querySelector("div");
+      setInterval(() => {
+        const count = parseInt($div.innerText);
+        $div.innerText = count + 1;
+      }, 1000); //1초 마다
+
+      //과제 타이머 만들기
+      //시작을 누르면 1초마다 숫자가 1씩 증가합니다
+      //(심화)시 분 초로 나누기
+
+      //중지 버든을 누르면 멈춥니다
+      //중지 상태에서 시작버튼을 누르면 다시 시작됩니다.
+
+      //리셋 버튼을 누르면 0으로 돌아갑니다
+      //clearInterVal()
+    </script>
+  </body>
+</html>
