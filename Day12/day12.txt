@@ -100,4 +100,17 @@ REST FULL하게 된다
 
 
 2. 실행
-    
+    선언문을 제외한 호추르 실행과정에서 소스코드에 필요한 정보를 컨텍스트에서부터 찾고
+    변수의 값이 변경되면 변수의 값을 초기화하여 재할당
+
+------------------------------------------------------------------------------------
+
+실행컨텍스트 내부
+  LexicalEnvironment(켁시컬 환경)
+    ->   스코프를 관리, 이 컨텍스트에서 사용할 수 있는 값들이 저장되는 공간
+    Environment Record
+      declarative Environment Record
+      Object Environment Record
+
+    OuterLexicalEnvironmentReference
+
